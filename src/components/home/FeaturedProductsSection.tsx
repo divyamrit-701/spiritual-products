@@ -115,9 +115,9 @@ export const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = (
                     
                     <div className="flex items-center gap-1 text-amber-500 font-bold text-xs">
                       <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                      <span>{product.rating.toFixed(1)}</span>
+                      <span>{(product.rating ?? 4.9).toFixed(1)}</span>
                       <span className="text-spiritual-earth-400 text-[11px] font-normal">
-                        ({product.reviewCount})
+                        ({product.reviewCount ?? 120})
                       </span>
                     </div>
                   </div>

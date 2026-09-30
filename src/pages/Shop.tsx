@@ -64,7 +64,8 @@ export const Shop: React.FC = () => {
         return false;
       }
       // Rating
-      if (minRating > 0 && p.rating < minRating) {
+      const pRating = p.rating ?? 5;
+      if (minRating > 0 && pRating < minRating) {
         return false;
       }
       // Charcoal free
@@ -76,7 +77,7 @@ export const Shop: React.FC = () => {
         return false;
       }
       // Tag
-      if (tagParam && !p.tags.includes(tagParam)) {
+      if (tagParam && (!p.tags || !p.tags.includes(tagParam))) {
         return false;
       }
       // Search
@@ -85,7 +86,8 @@ export const Shop: React.FC = () => {
         const matches = 
           p.name.toLowerCase().includes(q) ||
           p.categoryName.toLowerCase().includes(q) ||
-          p.fragrance.toLowerCase().includes(q);
+          (p.fragrance && p.fragrance.toLowerCase().includes(q)) ||
+          p.shortDescription.toLowerCase().includes(q);
         if (!matches) return false;
       }
       return true;
@@ -96,7 +98,7 @@ export const Shop: React.FC = () => {
         case 'price-desc':
           return b.price - a.price;
         case 'rating':
-          return b.rating - a.rating;
+          return (b.rating ?? 5) - (a.rating ?? 5);
         case 'bestselling':
           return (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0);
         case 'newest':

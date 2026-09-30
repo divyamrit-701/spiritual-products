@@ -40,13 +40,13 @@ export const ProductDetail: React.FC = () => {
   const relatedProducts = PRODUCTS.filter((p) => p.id !== product.id);
 
   const handleAddToCart = () => {
-    addToCart(product, undefined, quantity);
+    addToCart(product, quantity);
     setIsCartOpen(true);
     showToast(`${product.name} added to cart!`, undefined, 'success');
   };
 
   const handleBuyNow = () => {
-    addToCart(product, undefined, quantity);
+    addToCart(product, quantity);
     navigate('/checkout');
   };
 
@@ -112,7 +112,7 @@ export const ProductDetail: React.FC = () => {
                 <span className="bg-spiritual-earth-900/90 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
                   {product.categoryName}
                 </span>
-                {product.discountPercentage > 0 && (
+                {(product.discountPercentage || 0) > 0 && (
                   <span className="bg-emerald-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
                     Save {product.discountPercentage}%
                   </span>

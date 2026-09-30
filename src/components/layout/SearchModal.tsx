@@ -52,10 +52,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
         return (
           p.name.toLowerCase().includes(searchQuery) ||
           p.categoryName.toLowerCase().includes(searchQuery) ||
-          p.fragrance.toLowerCase().includes(searchQuery) ||
+          (p.fragrance && p.fragrance.toLowerCase().includes(searchQuery)) ||
           p.shortDescription.toLowerCase().includes(searchQuery) ||
-          p.tags.some((t) => t.toLowerCase().includes(searchQuery)) ||
-          p.ingredients.some((i) => i.toLowerCase().includes(searchQuery))
+          (p.tags && p.tags.some((t) => t.toLowerCase().includes(searchQuery))) ||
+          (p.ingredients && p.ingredients.some((i) => i.toLowerCase().includes(searchQuery)))
         );
       })
     : [];
@@ -63,8 +63,9 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
   const matchedCategories = searchQuery
     ? CATEGORIES.filter((c) => 
         c.name.toLowerCase().includes(searchQuery) || 
-        c.tagline.toLowerCase().includes(searchQuery) ||
-        c.featuredFragrances.some(f => f.toLowerCase().includes(searchQuery))
+        (c.tagline && c.tagline.toLowerCase().includes(searchQuery)) ||
+        (c.featuredFragrance && c.featuredFragrance.toLowerCase().includes(searchQuery)) ||
+        (c.featuredFragrances && c.featuredFragrances.some(f => f.toLowerCase().includes(searchQuery)))
       )
     : [];
 

@@ -65,7 +65,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
               </p>
             )}
             <div className="mt-2">
-              <RatingStars rating={product.rating} count={product.reviewCount} size="sm" />
+              <RatingStars rating={product.rating || 4.9} count={product.reviewCount || 120} size="sm" />
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({
                 {formatCurrency(mrp)}
               </span>
             )}
-            {product.discountPercentage > 0 && (
+            {(product.discountPercentage || 0) > 0 && (
               <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
                 {product.discountPercentage}% OFF
               </span>

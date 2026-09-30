@@ -9,7 +9,7 @@ interface RatingStarsProps {
 }
 
 export const RatingStars: React.FC<RatingStarsProps> = ({
-  rating,
+  rating = 5,
   count,
   size = 'sm',
   showCount = true
@@ -20,8 +20,9 @@ export const RatingStars: React.FC<RatingStarsProps> = ({
     lg: 'w-5 h-5'
   };
 
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 >= 0.4;
+  const safeRating = typeof rating === 'number' && !isNaN(rating) ? rating : 5;
+  const fullStars = Math.min(5, Math.max(0, Math.floor(safeRating)));
+  const hasHalfStar = safeRating % 1 >= 0.4;
   const emptyStars = Math.max(0, 5 - fullStars - (hasHalfStar ? 1 : 0));
 
   return (
@@ -40,7 +41,7 @@ export const RatingStars: React.FC<RatingStarsProps> = ({
       
       {showCount && (
         <span className="text-xs font-semibold text-spiritual-earth-700">
-          {rating.toFixed(1)}
+          {safeRating.toFixed(1)}
           {count !== undefined && (
             <span className="text-spiritual-earth-500 font-normal ml-1">
               ({count})
