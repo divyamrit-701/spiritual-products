@@ -2,63 +2,47 @@ import { Testimonial } from '../types';
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    id: 'test-01',
-    name: 'Ananya Deshpande',
-    city: 'Pune',
-    state: 'Maharashtra',
+    id: 't-1',
+    author: 'Meenakshi Sundaram',
+    location: 'Chennai, Tamil Nadu',
     rating: 5,
-    comment: 'The Mysore Sandalwood dhoop and Bhimseni camphor have transformed our morning family prayers. No cough, zero black smoke, just pure divine calmness that lingers till afternoon.',
-    productUsed: 'Mysore Sandalwood Bambooless Dhoop Sticks',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200',
-    date: '3 days ago',
-    verified: true
+    title: 'Zero black soot on my brass Krishna idol!',
+    comment: 'The Bhimseni camphor from Divyamrit is genuinely 100% pure. Earlier with market tablets, the aarti spoon and our silver Krishna idol would become dark with soot within days. This burns completely clean with a gentle blue flame and the most refreshing fragrance.',
+    productBought: 'Pure Bhimseni Camphor Box (250g Jar)',
+    date: '2026-08-10',
+    verifiedBuyer: true
   },
   {
-    id: 'test-02',
-    name: 'Radhakrishnan Swamy',
-    city: 'Chennai',
-    state: 'Tamil Nadu',
+    id: 't-2',
+    author: 'Rohit Deshmukh',
+    location: 'Pune, Maharashtra',
     rating: 5,
-    comment: 'As someone who performs daily Agnihotra and Sandhya rituals, the purity of camphor matters deeply. Divyamrit Bhimseni camphor leaves literally zero black carbon on my brass spoon. Superb quality.',
-    productUsed: '100% Pure Bhimseni Camphor Flakes',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200',
-    date: '1 week ago',
-    verified: true
+    title: 'Finally true bambooless sandalwood dhoop',
+    comment: 'Most incense sticks in the market give me an instant headache from synthetic chemicals. Divyamrit dhoop sticks smell like authentic Mysore sandalwood paste and natural Guggal. The smoke is soft, white, and very calming for morning meditation.',
+    productBought: 'Pure Bambooless Dhoop Sticks (Pack of 40)',
+    date: '2026-08-18',
+    verifiedBuyer: true
   },
   {
-    id: 'test-03',
-    name: 'Pooja Agarwal',
-    city: 'Jaipur',
-    state: 'Rajasthan',
+    id: 't-3',
+    author: 'Sunita Agarwal',
+    location: 'Varanasi, Uttar Pradesh',
     rating: 5,
-    comment: 'We ordered 50 Suvarna Luxury Gift Hampers for our daughter’s wedding return gifts. Every single guest praised the exquisite engraved wooden box and the rich natural aromas. Heartfelt gratitude!',
-    productUsed: 'Suvarna Divine Festive Puja Gift Box',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
-    date: '2 weeks ago',
-    verified: true
+    title: 'The Sacred Sadhana Duo is our permanent mandir choice',
+    comment: 'Ordered the combo duo for our new home Griha Pravesh. The packaging was immaculate and airtight. Both the dhoop sticks and pure camphor have become an essential part of our daily morning and evening Aarti. Exceptional purity and service.',
+    productBought: 'Sacred Sadhana Duo Combo',
+    date: '2026-08-22',
+    verifiedBuyer: true
   },
   {
-    id: 'test-04',
-    name: 'Col. Vikram Malhotra (Retd.)',
-    city: 'New Delhi',
-    state: 'Delhi NCR',
+    id: 't-4',
+    author: 'Ananya Roy',
+    location: 'Bengaluru, Karnataka',
     rating: 5,
-    comment: 'The Solid Brass Akhand Diya with glass chimney burns seamlessly for over 24 hours without fluttering. Heavy gauge authentic brass with superb Moradabad craftsmanship. Highly recommended.',
-    productUsed: 'Handcrafted Solid Brass Akhand Diya',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
-    date: '3 weeks ago',
-    verified: true
-  },
-  {
-    id: 'test-05',
-    name: 'Dr. Shalini Mukhopadhyay',
-    city: 'Kolkata',
-    state: 'West Bengal',
-    rating: 5,
-    comment: 'Knowing that sacred flowers offered at temples in Varanasi are upcycled into such soul-touching incense makes every morning prayer feel even more sacred. Truly an ethical, conscious Indian brand.',
-    productUsed: 'Kashi Temple Flora Flower-Recycled Incense',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
-    date: '1 month ago',
-    verified: true
+    title: 'Clean burning, long lasting & divine aura',
+    comment: 'Each dhoop stick easily burns for 45-50 minutes. The free ceramic stand is very thoughtful. Excellent customer support on WhatsApp when tracking our BlueDart parcel. Highly recommended for every spiritual home.',
+    productBought: 'Pure Bambooless Dhoop Sticks (Pack of 40)',
+    date: '2026-08-25',
+    verifiedBuyer: true
   }
 ];
