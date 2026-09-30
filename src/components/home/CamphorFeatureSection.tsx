@@ -1,7 +1,9 @@
 import React from 'react';
-import { Flame, Check, Sparkles, ShieldCheck, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Flame, Check, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { PRODUCTS } from '../../data/products';
+import { formatCurrency } from '../../utils/formatters';
 
 interface CamphorFeatureSectionProps {
   onExploreClick: () => void;
@@ -12,8 +14,13 @@ export const CamphorFeatureSection: React.FC<CamphorFeatureSectionProps> = ({
   onExploreClick,
   onQuickView
 }) => {
-  const { addToCart } = useCart();
-  const camphorProduct = PRODUCTS.find((p) => p.id === 'divyamrit-camphor-250') || PRODUCTS[1];
+  const { addToCart, setIsCartOpen } = useCart();
+  const camphorProduct = PRODUCTS.find((p) => p.slug === 'divyamrit-bhimseni-kapoor-pure-crystals-100g') || PRODUCTS[1];
+
+  const handleAddToCart = () => {
+    addToCart(camphorProduct);
+    setIsCartOpen(true);
+  };
 
   return (
     <section id="camphor-feature" className="py-16 sm:py-24 bg-spiritual-bg border-b border-spiritual-earth-200/60 overflow-hidden">
@@ -26,61 +33,36 @@ export const CamphorFeatureSection: React.FC<CamphorFeatureSectionProps> = ({
             <div className="space-y-2">
               <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-spiritual-gold-700 uppercase tracking-widest">
                 <Flame className="w-3.5 h-3.5" />
-                <span>Sacred Formulation 02</span>
+                <span>Sacred Offering 02</span>
               </div>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-4.5xl font-bold text-spiritual-earth-900 leading-tight">
-                Divyamrit 100% Pure Bhimseni Camphor
+                <Link to={`/products/${camphorProduct.slug}`} className="hover:text-spiritual-gold-800 transition-colors">
+                  Divyamrit Bhimseni Kapoor – Pure Crystals | 100g
+                </Link>
               </h2>
               <p className="text-xs sm:text-sm font-serif italic text-spiritual-gold-800">
-                भीमसेनी शुद्ध कपूर क्रिस्टल (१००% प्राकृतिक वानस्पतिक)
+                {camphorProduct.hindiName}
               </p>
             </div>
 
             <p className="text-sm sm:text-base text-spiritual-earth-700 leading-relaxed font-sans font-normal">
-              Pure, clean-burning camphor for daily puja and traditional rituals. Naturally crystallized from botanical pine bark, sublimating completely into pure holy vapors without leaving dark carbon residue, oily marks, or toxic soot on your sacred brass murtis.
+              {camphorProduct.shortDescription}
             </p>
 
-            {/* 4 Feature Highlights Grid */}
+            {/* 6 Feature Highlights Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-white border border-spiritual-earth-200/80 shadow-xs">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+              {camphorProduct.keyFeatures?.map((feature, i) => (
+                <div key={i} className="flex items-start gap-2.5 p-3 rounded-2xl bg-white border border-spiritual-earth-200/80 shadow-xs">
+                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-spiritual-earth-800 font-medium leading-snug block">
+                      {feature}
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">0.00% Black Soot</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Leaves zero carbon ash or stains on brass</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-white border border-spiritual-earth-200/80 shadow-xs">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">Pure Crystalline Form</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Natural raw crystal rocks without artificial wax</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-white border border-spiritual-earth-200/80 shadow-xs">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">Therapeutic Vapors</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Crisp aroma clears respiratory passages</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-white border border-spiritual-earth-200/80 shadow-xs">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">Airtight Metal Jar</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Moisture-locked to prevent sublimation for 24 mo</span>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Price & CTAs */}
@@ -88,37 +70,41 @@ export const CamphorFeatureSection: React.FC<CamphorFeatureSectionProps> = ({
               <div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl sm:text-3xl font-serif font-extrabold text-spiritual-earth-900">
-                    ₹449
+                    {formatCurrency(camphorProduct.price)}
                   </span>
-                  <span className="text-xs text-spiritual-earth-400 line-through">
-                    MRP ₹499
-                  </span>
-                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                    Save 10%
-                  </span>
+                  {camphorProduct.mrp > camphorProduct.price && (
+                    <span className="text-xs text-spiritual-earth-400 line-through">
+                      MRP {formatCurrency(camphorProduct.mrp)}
+                    </span>
+                  )}
+                  {camphorProduct.discountPercentage > 0 && (
+                    <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                      Save {camphorProduct.discountPercentage}% OFF
+                    </span>
+                  )}
                 </div>
                 <span className="text-[11px] text-spiritual-earth-500 font-sans block mt-0.5">
-                  250g Heavy Airtight Gold Container
+                  Pack Size: {camphorProduct.packSize}
                 </span>
               </div>
 
               <div className="flex items-center gap-2.5">
                 <button
                   type="button"
-                  onClick={() => addToCart(camphorProduct)}
+                  onClick={handleAddToCart}
                   className="flex-1 sm:flex-initial px-5 py-3 rounded-full bg-spiritual-earth-900 hover:bg-spiritual-gold-600 text-white text-xs font-bold tracking-wide transition-all shadow-md active:scale-95 flex items-center justify-center gap-1.5"
                 >
                   <ShoppingBag className="w-4 h-4 text-spiritual-gold-300" />
                   <span>Add to Cart</span>
                 </button>
 
-                <button
-                  type="button"
-                  onClick={() => onQuickView(camphorProduct)}
-                  className="px-5 py-3 rounded-full bg-white hover:bg-spiritual-gold-50 text-spiritual-earth-900 border border-spiritual-earth-300 text-xs font-semibold tracking-wide transition-all"
+                <Link
+                  to={`/products/${camphorProduct.slug}`}
+                  className="px-5 py-3 rounded-full bg-white hover:bg-spiritual-gold-50 text-spiritual-earth-900 border border-spiritual-earth-300 text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5"
                 >
-                  Explore Details
-                </button>
+                  <span>View Product</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
 
@@ -126,34 +112,34 @@ export const CamphorFeatureSection: React.FC<CamphorFeatureSectionProps> = ({
 
           {/* RIGHT: Premium White Marble Camphor Scene Image */}
           <div className="lg:col-span-6 relative order-1 lg:order-2">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[16/11] bg-spiritual-earth-100 group">
+            <Link to={`/products/${camphorProduct.slug}`} className="block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[16/11] bg-spiritual-earth-100 group">
               <img
                 src="/images/camphor_feature.jpg"
-                alt="Divyamrit 100% Pure Crystalline Bhimseni Camphor on brass platter with white jasmine"
+                alt="Divyamrit Bhimseni Kapoor Pure Crystals 100g"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               
               {/* Badge Overlay */}
               <div className="absolute top-4 left-4 bg-spiritual-earth-900/90 backdrop-blur-md text-white text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
                 <Flame className="w-3.5 h-3.5 text-spiritual-gold-400" />
-                <span>Zero Black Smoke Guaranteed</span>
+                <span>Pure Crystal Form</span>
               </div>
 
               {/* Bottom Caption Pill */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-spiritual-earth-200/80 shadow-md flex items-center justify-between text-xs">
                 <div>
                   <span className="font-serif font-bold text-spiritual-earth-900 block text-sm">
-                    Naturally Crystallized Karpuram
+                    Pure Bhimseni Kapoor Crystals
                   </span>
                   <span className="text-spiritual-earth-500 font-sans text-[11px]">
-                    250g Airtight Temple Jar
+                    100g × 1 Box (Special Pooja Pack)
                   </span>
                 </div>
                 <span className="font-bold text-spiritual-gold-800 text-sm font-serif">
-                  ₹449
+                  {formatCurrency(camphorProduct.price)}
                 </span>
               </div>
-            </div>
+            </Link>
           </div>
 
         </div>

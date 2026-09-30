@@ -1,7 +1,9 @@
 import React from 'react';
-import { Sparkles, Check, Flame, ShieldCheck, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Sparkles, Check, ArrowRight, ShoppingBag } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { PRODUCTS } from '../../data/products';
+import { formatCurrency } from '../../utils/formatters';
 
 interface DhoopFeatureSectionProps {
   onExploreClick: () => void;
@@ -12,8 +14,14 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
   onExploreClick,
   onQuickView
 }) => {
-  const { addToCart } = useCart();
-  const dhoopProduct = PRODUCTS.find((p) => p.id === 'divyamrit-dhoop-40') || PRODUCTS[0];
+  const { addToCart, setIsCartOpen } = useCart();
+  const navigate = useNavigate();
+  const dhoopProduct = PRODUCTS.find((p) => p.slug === 'divyamrit-4-in-1-premium-mix-fragrance-dhoop-sticks-pack-of-2') || PRODUCTS[0];
+
+  const handleAddToCart = () => {
+    addToCart(dhoopProduct);
+    setIsCartOpen(true);
+  };
 
   return (
     <section id="dhoop-feature" className="py-16 sm:py-24 bg-white border-b border-spiritual-earth-200/60 overflow-hidden">
@@ -22,34 +30,34 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
           
           {/* LEFT: Premium Lifestyle Image Scene */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-spiritual-bg aspect-[4/3] sm:aspect-[16/11] bg-spiritual-earth-100 group">
+            <Link to={`/products/${dhoopProduct.slug}`} className="block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-spiritual-bg aspect-[4/3] sm:aspect-[16/11] bg-spiritual-earth-100 group">
               <img
                 src="/images/dhoop_feature.jpg"
-                alt="Divyamrit Pure Bambooless Dhoop Sticks burning in a serene home mandir"
+                alt="Divyamrit 4-in-1 Premium Mix Fragrance Dhoop Sticks Pack of 2"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               
               {/* Badge Overlay */}
               <div className="absolute top-4 left-4 bg-spiritual-earth-900/90 backdrop-blur-md text-white text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-spiritual-gold-400" />
-                <span>100% Bamboo & Charcoal Free</span>
+                <span>4-in-1 Divine Fragrances</span>
               </div>
 
               {/* Bottom Caption Pill */}
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-spiritual-earth-200/80 shadow-md flex items-center justify-between text-xs">
                 <div>
                   <span className="font-serif font-bold text-spiritual-earth-900 block text-sm">
-                    Mysore Sandalwood & Wild Guggal
+                    Rose, Mogra, Loban & Guggal
                   </span>
                   <span className="text-spiritual-earth-500 font-sans text-[11px]">
-                    45–50 Minutes Slow Sacred Burn Time
+                    200g × 2 Boxes (400g Total Quantity)
                   </span>
                 </div>
                 <span className="font-bold text-spiritual-gold-800 text-sm font-serif">
-                  ₹349
+                  {formatCurrency(dhoopProduct.price)}
                 </span>
               </div>
-            </div>
+            </Link>
           </div>
 
           {/* RIGHT: Authentic Editorial Content */}
@@ -58,61 +66,36 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
             <div className="space-y-2">
               <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-spiritual-gold-700 uppercase tracking-widest">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Sacred Formulation 01</span>
+                <span>Sacred Offering 01</span>
               </div>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-4.5xl font-bold text-spiritual-earth-900 leading-tight">
-                Divyamrit Pure Bambooless Dhoop Sticks
+                <Link to={`/products/${dhoopProduct.slug}`} className="hover:text-spiritual-gold-800 transition-colors">
+                  Divyamrit 4-in-1 Premium Mix Fragrance Dhoop Sticks – Pack of 2
+                </Link>
               </h2>
               <p className="text-xs sm:text-sm font-serif italic text-spiritual-gold-800">
-                शुद्ध मैसूर चंदन व गुग्गल धूप बत्ती (१००% प्राकृतिक)
+                {dhoopProduct.hindiName}
               </p>
             </div>
 
             <p className="text-sm sm:text-base text-spiritual-earth-700 leading-relaxed font-sans font-normal">
-              Rich, soothing fragrance designed to create a calm and serene atmosphere during your daily rituals. Handcrafted with pure aged Mysore sandalwood powder, wild desert Guggal resin, and natural botanical binders without bamboo sticks or industrial charcoal combustion agents.
+              {dhoopProduct.shortDescription}
             </p>
 
             {/* 4 Feature Highlights Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-spiritual-bg border border-spiritual-earth-200/80">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+              {dhoopProduct.keyFeatures?.slice(0, 4).map((feature, i) => (
+                <div key={i} className="flex items-start gap-2.5 p-3 rounded-2xl bg-spiritual-bg border border-spiritual-earth-200/80">
+                  <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-spiritual-earth-800 font-medium leading-snug block">
+                      {feature}
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">100% Bamboo-Free</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Respects traditional domestic Agni principles</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-spiritual-bg border border-spiritual-earth-200/80">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">0% Charcoal & Toxins</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Pure white aromatic smoke with zero headache</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-spiritual-bg border border-spiritual-earth-200/80">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">45–50 Mins Slow Burn</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Extended burn for morning dhyana & evening aarti</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5 p-3 rounded-2xl bg-spiritual-bg border border-spiritual-earth-200/80">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Check className="w-3.5 h-3.5 stroke-[2.5]" />
-                </div>
-                <div>
-                  <strong className="block text-xs text-spiritual-earth-900 font-serif">Ceramic Stand Included</strong>
-                  <span className="text-[11px] text-spiritual-earth-600 font-sans">Complimentary heat-safe holder inside every box</span>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Price & CTAs */}
@@ -120,37 +103,34 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
               <div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl sm:text-3xl font-serif font-extrabold text-spiritual-earth-900">
-                    ₹349
+                    {formatCurrency(dhoopProduct.price)}
                   </span>
-                  <span className="text-xs text-spiritual-earth-400 line-through">
-                    MRP ₹399
-                  </span>
-                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                    Save 13%
+                  <span className="text-xs text-spiritual-earth-500">
+                    (MRP incl. all taxes)
                   </span>
                 </div>
                 <span className="text-[11px] text-spiritual-earth-500 font-sans block mt-0.5">
-                  Pack of 40 Sticks + Ceramic Holder
+                  Pack Size: {dhoopProduct.packSize}
                 </span>
               </div>
 
               <div className="flex items-center gap-2.5">
                 <button
                   type="button"
-                  onClick={() => addToCart(dhoopProduct)}
+                  onClick={handleAddToCart}
                   className="flex-1 sm:flex-initial px-5 py-3 rounded-full bg-spiritual-earth-900 hover:bg-spiritual-gold-600 text-white text-xs font-bold tracking-wide transition-all shadow-md active:scale-95 flex items-center justify-center gap-1.5"
                 >
                   <ShoppingBag className="w-4 h-4 text-spiritual-gold-300" />
                   <span>Add to Cart</span>
                 </button>
 
-                <button
-                  type="button"
-                  onClick={() => onQuickView(dhoopProduct)}
-                  className="px-5 py-3 rounded-full bg-spiritual-bg hover:bg-spiritual-gold-50 text-spiritual-earth-900 border border-spiritual-earth-300 text-xs font-semibold tracking-wide transition-all"
+                <Link
+                  to={`/products/${dhoopProduct.slug}`}
+                  className="px-5 py-3 rounded-full bg-spiritual-bg hover:bg-spiritual-gold-50 text-spiritual-earth-900 border border-spiritual-earth-300 text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5"
                 >
-                  Explore Details
-                </button>
+                  <span>View Product</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
 

@@ -59,14 +59,20 @@ export const CategoriesPage: React.FC = () => {
                 {/* Fragrance tags */}
                 <div>
                   <span className="text-[11px] font-bold text-spiritual-earth-500 uppercase tracking-wider block mb-1.5">
-                    Featured Fragrances:
+                    Featured Fragrance / Notes:
                   </span>
                   <div className="flex flex-wrap gap-1.5">
-                    {cat.featuredFragrances.map((f) => (
-                      <span key={f} className="text-[11px] bg-spiritual-gold-50 text-spiritual-gold-900 border border-spiritual-gold-200 px-2 py-0.5 rounded-full font-medium">
-                        {f}
+                    {cat.featuredFragrances ? (
+                      cat.featuredFragrances.map((f) => (
+                        <span key={f} className="text-[11px] bg-spiritual-gold-50 text-spiritual-gold-900 border border-spiritual-gold-200 px-2 py-0.5 rounded-full font-medium">
+                          {f}
+                        </span>
+                      ))
+                    ) : cat.featuredFragrance ? (
+                      <span className="text-[11px] bg-spiritual-gold-50 text-spiritual-gold-900 border border-spiritual-gold-200 px-2 py-0.5 rounded-full font-medium">
+                        {cat.featuredFragrance}
                       </span>
-                    ))}
+                    ) : null}
                   </div>
                 </div>
 

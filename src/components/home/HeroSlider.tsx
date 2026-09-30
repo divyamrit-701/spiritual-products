@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Sparkles, ArrowRight, ShieldCheck, Flame, CheckCircle2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Sparkles, ArrowRight, Flame, CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { PRODUCTS } from '../../data/products';
+import { useCart } from '../../context/CartContext';
 
 interface HeroSliderProps {
   onExploreClick: () => void;
@@ -14,6 +17,12 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
   onCamphorClick,
   onComboClick
 }) => {
+  const navigate = useNavigate();
+  const { addToCart, setIsCartOpen } = useCart();
+
+  const dhoopProduct = PRODUCTS.find((p) => p.slug === 'divyamrit-4-in-1-premium-mix-fragrance-dhoop-sticks-pack-of-2') || PRODUCTS[0];
+  const camphorProduct = PRODUCTS.find((p) => p.slug === 'divyamrit-bhimseni-kapoor-pure-crystals-100g') || PRODUCTS[1];
+
   const slides = [
     {
       id: 'slide-brand',
@@ -23,49 +32,61 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
       title: 'Pure Fragrance.\nTimeless Tradition.',
       subtitle: 'Thoughtfully crafted spiritual essentials for your everyday rituals and sacred sanctuary. Formulated in accordance with ancient Vedic principles.',
       primaryBtnText: 'Explore Collection',
-      primaryAction: onExploreClick,
-      secondaryBtnText: 'Order Sacred Duo',
-      secondaryAction: onComboClick,
-      highlights: ['100% Charcoal Free', 'Zero Black Soot', 'Pan-India Delivery']
+      primaryAction: () => {
+        const el = document.getElementById('products');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      },
+      secondaryBtnText: 'View Dhoop Sticks',
+      secondaryAction: () => navigate(`/products/${dhoopProduct.slug}`),
+      highlights: ['4-in-1 Sacred Fragrance', 'Pure Crystal Bhimseni Kapoor', 'Pan-India Delivery']
     },
     {
       id: 'slide-dhoop',
       bgImage: '/images/hero_slide_2.jpg',
-      badge: 'Flagship Formulation • 0% Charcoal',
+      badge: 'Pack of 2 Boxes (400g Total)',
       badgeIcon: <Sparkles className="w-3.5 h-3.5 text-spiritual-gold-400" />,
-      title: 'Pure Bambooless\nMysore Sandalwood Dhoop',
-      subtitle: 'Slow-burning natural dhoop sticks made with aged sandalwood powder and wild desert Guggal resin. Soft white smoke with 45–50 minutes burn time.',
-      primaryBtnText: 'Explore Dhoop Sticks',
-      primaryAction: onDhoopClick,
-      secondaryBtnText: 'Shop Pack (₹349)',
-      secondaryAction: onDhoopClick,
-      highlights: ['100% Bamboo-Free', 'Pure Sandalwood & Guggal', 'Ceramic Stand Included']
+      title: 'Divyamrit 4-in-1\nPremium Dhoop Sticks',
+      subtitle: 'Featuring Rose, Mogra, Loban & Guggal fragrances for a rich and divine pooja experience. 200g × 2 Boxes (400g Total Quantity).',
+      primaryBtnText: 'View Product Details',
+      primaryAction: () => navigate(`/products/${dhoopProduct.slug}`),
+      secondaryBtnText: 'Add to Cart (₹398)',
+      secondaryAction: () => {
+        addToCart(dhoopProduct);
+        setIsCartOpen(true);
+      },
+      highlights: ['Rose, Mogra, Loban & Guggal', '200g × 2 Boxes (400g Total)', '₹398 (MRP incl. all taxes)']
     },
     {
       id: 'slide-camphor',
       bgImage: '/images/hero_slide_3.jpg',
-      badge: 'Sacred Temple Camphor • 100% Organic',
+      badge: 'Pure Crystal Form • 100g Pack',
       badgeIcon: <Flame className="w-3.5 h-3.5 text-spiritual-gold-400" />,
-      title: 'Pure Crystalline\nBhimseni Kapoor',
-      subtitle: 'Naturally extracted organic pine crystals burning with a serene golden-blue flame, leaving zero black soot residue on idols or temple ceilings.',
-      primaryBtnText: 'Explore Bhimseni Camphor',
-      primaryAction: onCamphorClick,
-      secondaryBtnText: 'Shop Jar (₹449)',
-      secondaryAction: onCamphorClick,
-      highlights: ['0.00% Black Residue', 'Crisp Botanical Vapors', 'Airtight 250g Jar']
+      title: 'Divyamrit Bhimseni Kapoor\nPure Crystals | 100g',
+      subtitle: 'Specially packed for pooja, aarti, havan and daily spiritual rituals. Clean-burning crystals add a traditional and fragrant touch to your devotional space.',
+      primaryBtnText: 'View Product Details',
+      primaryAction: () => navigate(`/products/${camphorProduct.slug}`),
+      secondaryBtnText: 'Add to Cart (₹259)',
+      secondaryAction: () => {
+        addToCart(camphorProduct);
+        setIsCartOpen(true);
+      },
+      highlights: ['Pure Crystal Form', 'Suitable for Daily Aarti & Havan', '₹259 (Save 8% OFF)']
     },
     {
       id: 'slide-combo',
       bgImage: '/images/hero_slide_4.jpg',
-      badge: 'Complete Worship Kit • Best Value',
+      badge: 'Complete Sacred Pooja Set',
       badgeIcon: <Sparkles className="w-3.5 h-3.5 text-spiritual-gold-400" />,
-      title: 'The Sacred Sadhana\nDaily Worship Duo',
-      subtitle: 'Everything needed for your daily morning meditation and evening Aarti. 40 Bambooless Dhoop Sticks + 250g Pure Bhimseni Camphor Jar with Free Express Shipping.',
-      primaryBtnText: 'Order Sacred Duo (₹749)',
-      primaryAction: onComboClick,
+      title: 'Sacred Sadhana\nDaily Worship Essentials',
+      subtitle: 'Combine Divyamrit 4-in-1 Dhoop Sticks (400g) with Pure Bhimseni Kapoor Crystals (100g) for your daily pooja and spiritual sanctuary.',
+      primaryBtnText: 'Explore Sacred Offerings',
+      primaryAction: () => {
+        const el = document.getElementById('products');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      },
       secondaryBtnText: 'View All Products',
-      secondaryAction: onExploreClick,
-      highlights: ['Save ₹149 on Set', 'Free Express Air Shipping', 'Ceramic Burner Included']
+      secondaryAction: () => navigate('/shop'),
+      highlights: ['4-in-1 Dhoop Sticks (400g)', 'Bhimseni Kapoor (100g)', 'Express Fast Shipping']
     }
   ];
 

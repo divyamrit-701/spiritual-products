@@ -1,28 +1,26 @@
 export type ProductCategory = 
   | 'dhoop-sticks'
   | 'camphor'
-  | 'incense-sticks'
-  | 'puja-essentials'
-  | 'spiritual-fragrances'
   | 'combo-packs'
-  | 'gift-hampers'
-  | 'new-arrivals';
+  | 'pooja-essentials'
+  | 'all';
 
 export interface ProductVariant {
   id: string;
-  name: string; // e.g., '100g Box (40 Sticks)', '250g Jar', '500g Value Pack'
+  name: string; // e.g., '200g × 2 Boxes (400g Total)', '100g × 1 Box'
   price: number;
   mrp: number;
-  stock: number;
-  sku: string;
+  stock?: number;
+  sku?: string;
+  inStock?: boolean;
 }
 
 export interface FragranceProfile {
-  topNotes: string[];
-  heartNotes: string[];
-  baseNotes: string[];
-  intensity: 'Mild & Subtle' | 'Medium & Soothing' | 'Rich & Long-Lasting' | 'Deep & Temple Grade';
-  aura: string; // e.g., 'Calming & Stress Relieving', 'Purifying & Sacred'
+  topNotes?: string[];
+  heartNotes?: string[];
+  baseNotes?: string[];
+  intensity?: string;
+  aura?: string;
 }
 
 export interface ProductReview {
@@ -34,7 +32,7 @@ export interface ProductReview {
   title: string;
   comment: string;
   verifiedPurchase: boolean;
-  helpfulCount: number;
+  helpfulCount?: number;
 }
 
 export interface Product {
@@ -42,49 +40,59 @@ export interface Product {
   name: string;
   hindiName?: string;
   slug: string;
-  category: ProductCategory;
+  category: ProductCategory | string;
   categoryName: string;
   shortDescription: string;
   description: string;
   price: number;
   mrp: number;
-  discountPercentage: number;
+  discountPercentage?: number;
   images: string[];
-  fragrance: string;
+  fragrance?: string;
   fragranceProfile?: FragranceProfile;
-  ingredients: string[];
+  ingredients?: string[];
   packSize: string;
+  netQuantity?: string;
+  eachBox?: string;
+  suitableFor?: string;
+  keyFeatures?: string[];
+  productDetails?: Record<string, string>;
   burnTime?: string;
-  stock: number;
-  rating: number;
-  reviewCount: number;
+  stock?: number;
+  inStock?: boolean;
+  rating?: number;
+  reviewCount?: number;
   reviews?: ProductReview[];
   featured?: boolean;
   bestseller?: boolean;
   newArrival?: boolean;
   organic?: boolean;
   charcoalFree?: boolean;
+  bambooFree?: boolean;
+  naturalResins?: boolean;
   variants?: ProductVariant[];
-  howToUse: {
+  howToUse?: string[] | {
     steps: string[];
-    safetyWarning: string;
-    idealRitual: string;
+    safetyWarning?: string;
+    idealRitual?: string;
   };
-  specifications: Record<string, string>;
-  tags: string[];
+  specifications?: Record<string, string>;
+  benefits?: string[];
+  tags?: string[];
   frequentlyBoughtTogetherIds?: string[];
 }
 
 export interface CategoryInfo {
-  id: ProductCategory;
+  id: ProductCategory | string;
   slug: string;
   name: string;
-  hindiName: string;
-  tagline: string;
+  hindiName?: string;
+  tagline?: string;
   description: string;
   image: string;
   itemCount: number;
-  featuredFragrances: string[];
+  featuredFragrance?: string;
+  featuredFragrances?: string[];
 }
 
 export interface Collection {
@@ -94,9 +102,9 @@ export interface Collection {
   tagline: string;
   description: string;
   image: string;
-  bannerImage: string;
+  bannerImage?: string;
   productIds: string[];
-  occasion: string;
+  occasion?: string;
   badge?: string;
 }
 
@@ -179,20 +187,25 @@ export interface BlogPost {
 
 export interface FAQItem {
   id: string;
-  category: 'Purity & Ingredients' | 'Usage & Safety' | 'Orders & Shipping' | 'Bulk & Corporate' | 'Returns & Payments';
+  category?: 'Purity & Ingredients' | 'Usage & Safety' | 'Orders & Shipping' | 'Bulk & Corporate' | 'Returns & Payments' | string;
   question: string;
   answer: string;
 }
 
 export interface Testimonial {
   id: string;
-  name: string;
-  city: string;
-  state: string;
+  author?: string;
+  name?: string;
+  location?: string;
+  city?: string;
+  state?: string;
   rating: number;
+  title?: string;
   comment: string;
-  productUsed: string;
+  productBought?: string;
+  productUsed?: string;
   avatar?: string;
   date: string;
-  verified: boolean;
+  verified?: boolean;
+  verifiedBuyer?: boolean;
 }
