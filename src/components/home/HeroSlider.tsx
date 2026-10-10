@@ -42,19 +42,19 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
     },
     {
       id: 'slide-dhoop',
-      bgImage: '/images/hero_slide_2.jpg',
+      bgImage: '/images/products/dhoop-4in1-burning-brass.jpg',
       badge: 'Pack of 2 Boxes (400g Total)',
       badgeIcon: <Sparkles className="w-3.5 h-3.5 text-spiritual-gold-400" />,
       title: 'Divyamrit 4-in-1\nPremium Dhoop Sticks',
       subtitle: 'Featuring Rose, Mogra, Loban & Guggal fragrances for a rich and divine pooja experience. 200g × 2 Boxes (400g Total Quantity).',
       primaryBtnText: 'View Product Details',
       primaryAction: () => navigate(`/products/${dhoopProduct.slug}`),
-      secondaryBtnText: 'Add to Cart (₹398)',
+      secondaryBtnText: 'Add to Cart (₹252)',
       secondaryAction: () => {
         addToCart(dhoopProduct);
         setIsCartOpen(true);
       },
-      highlights: ['Rose, Mogra, Loban & Guggal', '200g × 2 Boxes (400g Total)', '₹398 (MRP incl. all taxes)']
+      highlights: ['Rose, Mogra, Loban & Guggal', '200g × 2 Jars (400g Total)', '₹252 (Save 37% OFF)']
     },
     {
       id: 'slide-camphor',
@@ -65,12 +65,12 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
       subtitle: 'Specially packed for pooja, aarti, havan and daily spiritual rituals. Clean-burning crystals add a traditional and fragrant touch to your devotional space.',
       primaryBtnText: 'View Product Details',
       primaryAction: () => navigate(`/products/${camphorProduct.slug}`),
-      secondaryBtnText: 'Add to Cart (₹259)',
+      secondaryBtnText: 'Add to Cart (₹232)',
       secondaryAction: () => {
         addToCart(camphorProduct);
         setIsCartOpen(true);
       },
-      highlights: ['Pure Crystal Form', 'Suitable for Daily Aarti & Havan', '₹259 (Save 8% OFF)']
+      highlights: ['100% Pure Crystal Form', 'Diffuser & Aarti Friendly', '₹232 (Save 17% OFF)']
     },
     {
       id: 'slide-combo',

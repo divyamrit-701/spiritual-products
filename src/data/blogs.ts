@@ -57,7 +57,7 @@ Because there is zero coal or bamboo core, every milligram burning produces pure
     publishedDate: '2026-08-20',
     readTime: '5 min read',
     tags: ['Dhoop Sticks', 'Bambooless', 'Meditation', 'Vedic Rituals'],
-    relatedProductIds: ['divyamrit-dhoop-40', 'divyamrit-combo-duo']
+    relatedProductIds: ['divyamrit-dhoop-4in1-pack2']
   },
   {
     id: 'blog-vastu-fragrance',
@@ -80,6 +80,6 @@ Because there is zero coal or bamboo core, every milligram burning produces pure
     publishedDate: '2026-08-28',
     readTime: '4 min read',
     tags: ['Vastu Shastra', 'Positive Energy', 'Camphor Aarti', 'Home Peace'],
-    relatedProductIds: ['divyamrit-combo-duo', 'divyamrit-camphor-250']
+    relatedProductIds: ['divyamrit-dhoop-4in1-pack2', 'divyamrit-bhimseni-kapoor-100g']
   }
 ];

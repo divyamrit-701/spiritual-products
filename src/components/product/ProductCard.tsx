@@ -176,17 +176,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
         {/* Pricing & Add to Cart Button */}
         <div className="pt-2 border-t border-spiritual-earth-100 flex items-center justify-between gap-2">
           <div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-base sm:text-lg font-bold text-spiritual-earth-900">
+            <div className="flex items-baseline gap-1.5 flex-wrap">
+              <span className="text-base sm:text-lg font-bold text-spiritual-earth-900 font-serif">
                 {formatCurrency(currentPrice)}
               </span>
               {currentMrp > currentPrice && (
-                <span className="text-xs text-spiritual-earth-400 line-through">
+                <span className="text-xs text-spiritual-earth-400 line-through font-sans">
                   {formatCurrency(currentMrp)}
                 </span>
               )}
+              {(product.discountPercentage || 0) > 0 && (
+                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
+                  {product.discountPercentage}% OFF
+                </span>
+              )}
             </div>
-            <span className="text-[10px] text-emerald-700 font-medium block">
+            <span className="text-[10px] text-spiritual-earth-500 font-medium block">
               Inclusive of all taxes
             </span>
           </div>
@@ -194,7 +199,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
           <button
             type="button"
             onClick={handleAddToCart}
-            className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-spiritual-earth-900 hover:bg-spiritual-gold-600 text-white text-xs font-semibold shadow-sm hover:shadow-md transition-all active:scale-95 shrink-0"
+            className="flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-spiritual-earth-900 hover:bg-spiritual-gold-600 text-white text-xs font-semibold shadow-xs hover:shadow-sm transition-all active:scale-95 shrink-0"
             aria-label="Add to cart"
           >
             <ShoppingBag className="w-3.5 h-3.5 text-spiritual-gold-300" />

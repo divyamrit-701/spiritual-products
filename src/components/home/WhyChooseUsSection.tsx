@@ -5,33 +5,33 @@ export const WhyChooseUsSection: React.FC = () => {
   const features = [
     {
       icon: <ShieldCheck className="w-6 h-6 text-spiritual-gold-700" />,
-      title: 'Pure & Authentic',
-      description: '100% natural botanical formulations without synthetic chemical binders, artificial dyes, or coal fillers.'
-    },
-    {
-      icon: <Leaf className="w-6 h-6 text-spiritual-gold-700" />,
-      title: 'Carefully Selected Ingredients',
-      description: 'Hand-picked wild desert Guggal resin, pure aged Mysore sandalwood powder, and organic pine crystal camphor.'
-    },
-    {
-      icon: <Sparkles className="w-6 h-6 text-spiritual-gold-700" />,
-      title: 'Traditional Spiritual Heritage',
-      description: 'Formulated strictly according to sacred Vedic Dhoopa Vidhana and classical Indian scripture principles.'
-    },
-    {
-      icon: <Award className="w-6 h-6 text-spiritual-gold-700" />,
-      title: 'Premium Quality Assured',
-      description: 'Leaves 0.00% black soot on brass idols, burns with a calm holy flame, and releases clean, headache-free aromas.'
-    },
-    {
-      icon: <Heart className="w-6 h-6 text-spiritual-gold-700" />,
-      title: 'Thoughtfully Crafted',
-      description: 'Hand-rolled by skilled artisans and sealed in airtight moisture-lock metal containers for lasting freshness.'
+      title: '100% Bambooless & Carbon Free',
+      description: 'Zero bamboo core burning in accordance with sacred scriptures. Formulated carbon-free with pure, calming white smoke.'
     },
     {
       icon: <Flame className="w-6 h-6 text-spiritual-gold-700" />,
-      title: 'Made for Everyday Puja',
-      description: 'Balanced for daily morning Sandhya prayers, evening family Aarti, yoga practice, and calming home meditation.'
+      title: 'Pure Bhimseni Camphor Crystals',
+      description: 'Naturally crystallized camphor chunks that burn completely with a radiant flame, leaving zero black soot on sacred idols.'
+    },
+    {
+      icon: <Sparkles className="w-6 h-6 text-spiritual-gold-700" />,
+      title: '4-in-1 Traditional Fragrances',
+      description: 'Carefully balanced natural Rose petals, sweet Mogra blossom, sacred Loban resin, and wild Guggal in each jar.'
+    },
+    {
+      icon: <Award className="w-6 h-6 text-spiritual-gold-700" />,
+      title: 'Airtight Moisture-Lock Jars',
+      description: 'Sealed in premium golden-cap containers with airtight protection to preserve the fresh essential aroma of every stick.'
+    },
+    {
+      icon: <Heart className="w-6 h-6 text-spiritual-gold-700" />,
+      title: 'Authentic Jaipur Heritage',
+      description: 'Thoughtfully formulated and packed in Vidhyadhar Nagar, Jaipur, Rajasthan, honoring Sanatana worship traditions.'
+    },
+    {
+      icon: <Leaf className="w-6 h-6 text-spiritual-gold-700" />,
+      title: 'Direct Devotee Care & Trust',
+      description: 'Transparent pricing with direct WhatsApp ordering, express safe transit, and verified listings on Flipkart.'
     }
   ];
 

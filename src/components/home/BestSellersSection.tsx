@@ -40,8 +40,8 @@ export const BestSellersSection: React.FC<BestSellersSectionProps> = ({ onQuickV
           </Link>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        {/* Products Grid - Centered 2-Column Luxury Presentation for the 2 Flagship Offerings */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {bestSellers.map((product) => (
             <ProductCard 
               key={product.id} 

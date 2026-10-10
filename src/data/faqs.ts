@@ -22,25 +22,25 @@ export const FAQS: FAQItem[] = [
   {
     id: 'faq-4',
     question: 'What products does Divyamrit offer?',
-    answer: 'Divyamrit focuses strictly on high-purity spiritual essentials for daily worship and meditation. Our core offerings include Pure Bambooless Dhoop Sticks (Mysore Sandalwood & Wild Guggal) and 100% Pure Crystalline Bhimseni Camphor, available as individual packs and curated Sacred Sadhana Duo combo sets.',
+    answer: 'Divyamrit focuses strictly on high-purity spiritual essentials for daily worship and meditation. Our core offerings are Divyamrit 4-in-1 Premium Mix Fragrance Dhoop Sticks (Rose, Mogra, Loban & Guggal – Pack of 2, 400g total) and 100% Pure Crystalline Bhimseni Kapoor (100g Jar), available individually or as pooja combinations.',
     category: 'Products & Orders'
   },
   {
     id: 'faq-5',
-    question: 'Do you offer combo packs and festive sets?',
-    answer: 'Yes! Our Sacred Sadhana Duo brings together a 40-stick pack of Bambooless Dhoop Sticks and a 250g jar of Bhimseni Camphor with a complimentary ceramic burner, saving you ₹149 and including Free Express Delivery across India. Value family packs and temple bundles are also available.',
+    question: 'Are Divyamrit products also available on Flipkart?',
+    answer: 'Yes! Both Divyamrit 4-in-1 Dhoop Sticks (DIVYAMRIT 02) and Divyamrit Bhimseni Kapoor (DIVYAMRIT 01) are officially listed and available on Flipkart, as well as for direct ordering on our website and WhatsApp desk (+91 91165 79047).',
     category: 'Products & Orders'
   },
   {
     id: 'faq-6',
     question: 'How long does shipping and delivery take across India?',
-    answer: 'All orders are carefully packed and dispatched within 24 hours from our sanctum facility via express courier partners (BlueDart, Delhivery, DTDC, and Speed Post). Delivery typically takes 2 to 3 business days for Metro cities and 3 to 5 business days for other Indian regions. Live SMS and WhatsApp tracking links are shared upon dispatch.',
+    answer: 'All orders are carefully packed and dispatched within 24 hours from Jaipur, Rajasthan via trusted express couriers (BlueDart, Delhivery, DTDC, and India Post). Delivery typically takes 2 to 4 business days. Live tracking updates are shared on WhatsApp upon dispatch.',
     category: 'Orders & Shipping'
   },
   {
     id: 'faq-7',
     question: 'What is Divyamrit’s return and transit damage policy?',
-    answer: 'We provide a 100% Safe Transit Guarantee. If any item or jar is damaged in transit, simply share a quick photo with our devotee care team on WhatsApp (+91 98200 12345) or email (care@divyamrit.com) within 48 hours of delivery, and we will dispatch a brand-new replacement immediately at zero extra cost.',
+    answer: 'We provide a 100% Safe Transit Guarantee. If any jar is damaged in transit, simply share a photo with our devotee desk on WhatsApp (+91 91165 79047) or email (Contact@divyamrit.store) within 48 hours, and we will dispatch a brand-new replacement immediately at zero extra cost.',
     category: 'Returns & Payments'
   }
 ];

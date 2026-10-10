@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Sparkles, ShoppingBag, Eye, Star, Check, ArrowRight } from 'lucide-react';
 import { PRODUCTS } from '../../data/products';
 import { Product } from '../../types';
@@ -73,11 +74,13 @@ export const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = (
               <div>
                 {/* Product Image Frame with Badges and Quick View */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-spiritual-earth-100">
-                  <img
-                    src={product.images[0]}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <Link to={`/products/${product.slug}`} className="block w-full h-full">
+                    <img
+                      src={product.images[0]}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </Link>
                   
                   {/* Badges */}
                   <div className="absolute top-3.5 left-3.5 flex flex-col gap-1.5 items-start">
@@ -123,11 +126,10 @@ export const FeaturedProductsSection: React.FC<FeaturedProductsSectionProps> = (
                   </div>
 
                   {/* Title */}
-                  <h3 
-                    onClick={() => onProductClick(product)}
-                    className="font-serif text-xl sm:text-2xl font-bold text-spiritual-earth-900 group-hover:text-spiritual-gold-800 transition-colors line-clamp-1 cursor-pointer"
-                  >
-                    {product.name}
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-spiritual-earth-900 group-hover:text-spiritual-gold-800 transition-colors line-clamp-1">
+                    <Link to={`/products/${product.slug}`}>
+                      {product.name}
+                    </Link>
                   </h3>
 
                   {product.hindiName && (

@@ -7,7 +7,7 @@ export const CATEGORIES: CategoryInfo[] = [
     hindiName: 'शुद्ध धूप बत्ती',
     slug: 'dhoop-sticks',
     description: 'Divyamrit 4-in-1 premium mix fragrance dhoop sticks featuring Rose, Mogra, Loban and Guggal for a divine pooja atmosphere.',
-    image: '/images/cat_dhoop.jpg',
+    image: '/images/products/dhoop-4in1-pack2.jpg',
     itemCount: 1,
     featuredFragrance: 'Rose, Mogra, Loban & Guggal'
   },
