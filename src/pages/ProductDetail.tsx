@@ -199,7 +199,7 @@ export const ProductDetail: React.FC = () => {
                       MRP {formatCurrency(product.mrp)}
                     </span>
                     <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                      Save {formatCurrency(product.mrp - product.price)} (8% OFF)
+                      Save {formatCurrency(product.mrp - product.price)} ({product.discountPercentage || Math.round(((product.mrp - product.price) / product.mrp) * 100)}% OFF)
                     </span>
                   </>
                 ) : (
@@ -301,7 +301,7 @@ export const ProductDetail: React.FC = () => {
                     rel="noreferrer"
                     className="w-full py-3 px-4 rounded-full bg-[#2874f0] hover:bg-[#1a5bc7] text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-xs"
                   >
-                    <span>Buy on Flipkart (₹232)</span>
+                    <span>Buy on Flipkart ({formatCurrency(product.price)})</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 ) : (

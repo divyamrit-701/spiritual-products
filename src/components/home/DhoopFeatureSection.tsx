@@ -32,7 +32,7 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
           <div className="lg:col-span-6 relative">
             <Link to={`/products/${dhoopProduct.slug}`} className="block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-spiritual-bg aspect-[4/3] sm:aspect-[16/11] bg-spiritual-earth-100 group">
               <img
-                src="/images/dhoop_feature.jpg"
+                src="/images/products/dhoop-4in1-burning-brass.jpg"
                 alt="Divyamrit 4-in-1 Premium Mix Fragrance Dhoop Sticks Pack of 2"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -53,9 +53,14 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
                     200g × 2 Boxes (400g Total Quantity)
                   </span>
                 </div>
-                <span className="font-bold text-spiritual-gold-800 text-sm font-serif">
-                  {formatCurrency(dhoopProduct.price)}
-                </span>
+                <div className="text-right">
+                  <span className="font-bold text-spiritual-gold-800 text-sm font-serif block">
+                    {formatCurrency(dhoopProduct.price)}
+                  </span>
+                  <span className="text-[10px] text-emerald-700 font-bold block">
+                    37% OFF
+                  </span>
+                </div>
               </div>
             </Link>
           </div>
@@ -105,13 +110,32 @@ export const DhoopFeatureSection: React.FC<DhoopFeatureSectionProps> = ({
                   <span className="text-2xl sm:text-3xl font-serif font-extrabold text-spiritual-earth-900">
                     {formatCurrency(dhoopProduct.price)}
                   </span>
-                  <span className="text-xs text-spiritual-earth-500">
-                    (MRP incl. all taxes)
-                  </span>
+                  {dhoopProduct.mrp > dhoopProduct.price && (
+                    <span className="text-xs text-spiritual-earth-400 line-through">
+                      MRP {formatCurrency(dhoopProduct.mrp)}
+                    </span>
+                  )}
+                  {dhoopProduct.discountPercentage > 0 && (
+                    <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                      Save {dhoopProduct.discountPercentage}% OFF
+                    </span>
+                  )}
                 </div>
-                <span className="text-[11px] text-spiritual-earth-500 font-sans block mt-0.5">
-                  Pack Size: {dhoopProduct.packSize}
-                </span>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <span className="text-[11px] text-spiritual-earth-500 font-sans block">
+                    Pack Size: {dhoopProduct.packSize}
+                  </span>
+                  {dhoopProduct.flipkartUrl && (
+                    <a
+                      href={dhoopProduct.flipkartUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[10px] font-bold text-[#2874f0] hover:underline"
+                    >
+                      • Also on Flipkart
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className="flex items-center gap-2.5">
