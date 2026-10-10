@@ -70,18 +70,19 @@ export const PRODUCTS: Product[] = [
     slug: 'divyamrit-bhimseni-kapoor-pure-crystals-100g',
     category: 'camphor',
     categoryName: 'Kapoor / Pooja Essentials',
-    shortDescription: 'Divyamrit Bhimseni Kapoor Pure Crystals, specially packed for pooja, aarti and daily spiritual rituals. Its clean-burning crystals add a traditional and fragrant touch to your devotional space.',
-    description: 'Divyamrit Bhimseni Kapoor – Pure Crystals is a premium-quality camphor product designed for everyday pooja, aarti and spiritual rituals. The crystal form makes it convenient to use while maintaining the traditional essence of kapoor in your devotional practices.\n\nPerfect for use during daily pooja, aarti, havan and festive rituals, Divyamrit Bhimseni Kapoor can help create a fresh and devotional atmosphere in your home or pooja room.',
-    price: 259,
+    shortDescription: 'Divyamrit Bhimseni Camphor is made from high-quality pure camphor crystals, ideal for daily pooja, havan and spiritual rituals. It burns cleanly with a pleasant fragrance and leaves zero ash.',
+    description: 'Divyamrit Bhimseni Camphor is made from high-quality pure camphor crystals, ideal for daily pooja, havan and spiritual rituals. It burns cleanly with a pleasant fragrance and is suitable for use in homes, temples and religious ceremonies. Pack contains 100g of pure camphor crystals.\n\nCrafted with reverence, these naturally formed crystal chunks impart a divine vibrational purity to any sacred space, diffuser, or daily aarti.',
+    price: 232,
     mrp: 280,
-    discountPercentage: 8,
+    discountPercentage: 17,
+    flipkartUrl: 'https://www.flipkart.com/divyamrit-01/p/itm542bd41932e12?pid=HAIHRX7AHQQUXD5R&lid=LSTHAIHRX7AHQQUXD5RVMNNJU&marketplace=FLIPKART&q=divyamrit+kapoor',
     images: [
       '/images/products/kapoor-jar-front.jpg',
       '/images/products/kapoor-jar-crystals.jpg',
       '/images/products/kapoor-mandir-lifestyle.jpg',
       '/images/products/kapoor-jar-back.jpg',
-      '/images/products/kapoor-jar-details.jpg',
-      '/images/products/kapoor-crystals-macro.jpg'
+      '/images/products/kapoor-crystals-macro.jpg',
+      '/images/products/kapoor-jar-details.jpg'
     ],
     fragrance: 'Pure Botanical Bhimseni Camphor',
     packSize: '100g × 1 Jar',
@@ -90,22 +91,25 @@ export const PRODUCTS: Product[] = [
     suitableFor: 'Daily pooja, aarti, havan and diffuser aromatherapy',
     ingredients: ['100% Pure Naturally Crystallized Bhimseni Camphor'],
     keyFeatures: [
-      '100% Natural & Pure Crystal Form',
-      'Ideal for Pooja, Aarti & Meditation',
-      'Soothing & Pure Camphor Aroma',
-      'Diffuser Friendly for Home Fragrance',
+      '100% Natural Pure Camphor Crystals',
+      'Ideal for Daily Pooja, Aarti & Meditation',
+      'Soothing & Pure Sacred Camphor Aroma',
+      'Diffuser & Kapoor Dani Friendly',
       'Zero Black Soot & Clean Burning Flame',
       'Packed & Marketed by Divyamrit, Jaipur'
     ],
     productDetails: {
-      'Brand': 'Divyamrit',
+      'Brand': 'DIVYAMRIT',
+      'Model Number': '01',
       'Tagline': 'Pavitrata Har Pooja Ki',
       'Product': 'Bhimseni Kapoor Pure Crystals',
       'Net Wt. (when packed)': '100 g',
       'MRP (Incl. of all taxes)': '₹280.00',
-      'Selling Price': '₹259.00',
-      'USP': '₹2.80/g',
-      'Packed & Marketed by': 'Divyamrit, Vidhyadhar Nagar, Jaipur',
+      'Selling Price': '₹232.00',
+      'Special Offer': '17% OFF on Flipkart & Direct Store',
+      'USP': '₹2.32/g',
+      'Manufacturer': 'Divyamrit, 701 Dhanuka Sunshine Kalyan, Sikar Road, Ambabari, Jaipur - 302039',
+      'Packed & Marketed by': 'Divyamrit, Vidhyadhar Nagar, Jaipur, Rajasthan',
       'Barcode': '25103227',
       'Customer Care': '+91 9116579047',
       'Email': 'Contact@divyamrit.store',
@@ -122,7 +126,7 @@ export const PRODUCTS: Product[] = [
     featured: true,
     bestseller: true,
     variants: [
-      { id: 'v-camphor-100g', name: '100g × 1 Box', price: 259, mrp: 280, inStock: true }
+      { id: 'v-camphor-100g', name: '100g × 1 Jar', price: 232, mrp: 280, inStock: true }
     ],
     howToUse: [
       'Take 1 or 2 crystal chunks in an Aarti spoon, diya, or havan kund.',

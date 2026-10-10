@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
             <img 
               src="/images/logo.png" 
               alt="Divyamrit - Pavitrata Har Pooja Ki" 
-              className="h-10 sm:h-12 w-auto object-contain"
+              className="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
           </Link>
 

@@ -80,6 +80,7 @@ export interface Product {
   benefits?: string[];
   tags?: string[];
   frequentlyBoughtTogetherIds?: string[];
+  flipkartUrl?: string;
 }
 
 export interface CategoryInfo {

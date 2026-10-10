@@ -28,20 +28,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           
           {/* COLUMN 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <img 
-                src="/images/logo.png" 
-                alt="Divyamrit - Pavitrata Har Pooja Ki" 
-                className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-sm"
-              />
-              <div>
-                <span className="font-serif text-2xl font-bold text-white tracking-wide block">
-                  Divyamrit
-                </span>
-                <span className="text-[9px] uppercase tracking-[0.22em] text-spiritual-gold-400 font-sans">
-                  Pavitrata Har Pooja Ki
-                </span>
-              </div>
+            <div className="flex flex-col items-start gap-2">
+              <Link 
+                to="/" 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="inline-block group focus:outline-none"
+              >
+                <img 
+                  src="/images/logo-light.png" 
+                  alt="Divyamrit - Pavitrata Har Pooja Ki" 
+                  className="h-16 w-auto object-contain transition-opacity group-hover:opacity-90 drop-shadow-xs"
+                />
+              </Link>
             </div>
 
             <p className="text-xs sm:text-sm text-spiritual-earth-400 font-sans leading-relaxed">

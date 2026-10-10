@@ -83,9 +83,21 @@ export const CamphorFeatureSection: React.FC<CamphorFeatureSectionProps> = ({
                     </span>
                   )}
                 </div>
-                <span className="text-[11px] text-spiritual-earth-500 font-sans block mt-0.5">
-                  Pack Size: {camphorProduct.packSize}
-                </span>
+                <div className="flex items-center gap-2 mt-0.5">
+                  <span className="text-[11px] text-spiritual-earth-500 font-sans block">
+                    Pack Size: {camphorProduct.packSize}
+                  </span>
+                  {camphorProduct.flipkartUrl && (
+                    <a
+                      href={camphorProduct.flipkartUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[10px] font-bold text-[#2874f0] hover:underline"
+                    >
+                      • Also on Flipkart
+                    </a>
+                  )}
+                </div>
               </div>
 
               <div className="flex items-center gap-2.5">

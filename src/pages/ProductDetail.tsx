@@ -284,15 +284,34 @@ export const ProductDetail: React.FC = () => {
               </div>
 
               {/* Direct WhatsApp Ordering Assistance */}
-              <div className="pt-2">
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <a
                   href={`https://wa.me/919116579047?text=${encodeURIComponent(`Hello Divyamrit, I would like to order ${quantity}x ${product.name} (${product.packSize}) at ${formatCurrency(product.price * quantity)}.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full py-3 px-4 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-xs"
                 >
-                  <span>Order via WhatsApp (+91 91165 79047)</span>
+                  <span>Order via WhatsApp</span>
                 </a>
+
+                {product.flipkartUrl ? (
+                  <a
+                    href={product.flipkartUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full py-3 px-4 rounded-full bg-[#2874f0] hover:bg-[#1a5bc7] text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-xs"
+                  >
+                    <span>Buy on Flipkart (₹232)</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                ) : (
+                  <a
+                    href="tel:+919116579047"
+                    className="w-full py-3 px-4 rounded-full bg-spiritual-earth-100 hover:bg-spiritual-earth-200 text-spiritual-earth-800 text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <span>Call Helpline: +91 91165 79047</span>
+                  </a>
+                )}
               </div>
             </div>
 
