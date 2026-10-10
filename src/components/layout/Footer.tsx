@@ -29,15 +29,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           {/* COLUMN 1: Brand & Contact Info (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-spiritual-gold-500/20 text-spiritual-gold-400 flex items-center justify-center border border-spiritual-gold-400/40 text-xl">
-                🪔
-              </div>
+              <img 
+                src="/images/logo.png" 
+                alt="Divyamrit - Pavitrata Har Pooja Ki" 
+                className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-sm"
+              />
               <div>
                 <span className="font-serif text-2xl font-bold text-white tracking-wide block">
                   Divyamrit
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.22em] text-spiritual-gold-400 font-sans">
-                  Vedic Spiritual Essentials
+                  Pavitrata Har Pooja Ki
                 </span>
               </div>
             </div>
@@ -49,15 +51,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             <div className="space-y-2.5 pt-2 text-xs text-spiritual-earth-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-spiritual-gold-400 shrink-0 mt-0.5" />
-                <span>Sanctum House, Dashashwamedh Ghat Road, Varanasi, Uttar Pradesh – 221001, Bharat</span>
+                <span>Divyamrit, Vidhyadhar Nagar, Jaipur, Rajasthan, Bharat</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-spiritual-gold-400 shrink-0" />
-                <a href="tel:+919820012345" className="hover:text-white transition-colors">+91 98200 12345</a>
+                <a href="tel:+919116579047" className="hover:text-white transition-colors">+91 91165 79047</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-spiritual-gold-400 shrink-0" />
-                <a href="mailto:care@divyamrit.com" className="hover:text-white transition-colors">care@divyamrit.com</a>
+                <a href="mailto:Contact@divyamrit.store" className="hover:text-white transition-colors">Contact@divyamrit.store</a>
               </div>
             </div>
           </div>
@@ -74,8 +76,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 </button>
               </li>
               <li>
-                <a href="https://wa.me/919820012345" target="_blank" rel="noreferrer" className="hover:text-spiritual-gold-400 transition-colors">
-                  Customer Care WhatsApp
+                <a href="https://wa.me/919116579047" target="_blank" rel="noreferrer" className="hover:text-spiritual-gold-400 transition-colors">
+                  Customer Care WhatsApp (+91 91165 79047)
                 </a>
               </li>
               <li>
@@ -169,7 +171,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 <Youtube className="w-4 h-4" />
               </a>
               <a
-                href="https://wa.me/919820012345"
+                href="https://wa.me/919116579047"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"

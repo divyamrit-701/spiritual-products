@@ -84,23 +84,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* LEFT: Brand Logo (Dhicam inspiration) */}
+          {/* LEFT: Authentic Brand Logo */}
           <Link 
             to="/" 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-3 group focus:outline-none shrink-0"
+            className="flex items-center gap-2 group focus:outline-none shrink-0 py-0.5"
           >
-            <div className="w-9 h-9 rounded-full bg-spiritual-gold-100 text-spiritual-gold-800 flex items-center justify-center border border-spiritual-gold-300/80 shadow-xs group-hover:scale-105 transition-transform">
-              <span className="text-lg">🪔</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-2xl sm:text-2.5xl font-bold tracking-tight text-spiritual-earth-900 group-hover:text-spiritual-gold-800 transition-colors">
-                Divyamrit
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.22em] font-medium text-spiritual-earth-500 -mt-1 font-sans">
-                Vedic Spiritual Essentials
-              </span>
-            </div>
+            <img 
+              src="/images/logo.png" 
+              alt="Divyamrit - Pavitrata Har Pooja Ki" 
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* CENTER: Clean Navigation with Smooth Catalog Dropdown */}
@@ -240,7 +234,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
 
             {/* Quick WhatsApp Order CTA */}
             <a
-              href="https://wa.me/919820012345?text=Hello%20Divyamrit%2C%20I%20would%20like%20to%20place%20an%20order%20for%20pure%20puja%20essentials."
+              href="https://wa.me/919116579047?text=Hello%20Divyamrit%2C%20I%20would%20like%20to%20place%20an%20order%20for%20pure%20puja%20essentials."
               target="_blank"
               rel="noreferrer"
               className="hidden lg:flex items-center gap-1.5 px-4 py-2 rounded-full bg-spiritual-earth-900 hover:bg-spiritual-gold-700 text-white text-xs font-bold tracking-wide transition-all shadow-xs active:scale-95"
@@ -324,13 +318,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSearch }) => {
 
             <div className="pt-2">
               <a
-                href="https://wa.me/919820012345?text=Hello%20Divyamrit%2C%20I%20would%20like%20to%20place%20an%20order."
+                href="https://wa.me/919116579047?text=Hello%20Divyamrit%2C%20I%20would%20like%20to%20place%20an%20order."
                 target="_blank"
                 rel="noreferrer"
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-emerald-700 text-white text-xs font-bold shadow-sm"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Order on WhatsApp (+91 98200 12345)</span>
+                <span>Order on WhatsApp (+91 91165 79047)</span>
               </a>
             </div>
 

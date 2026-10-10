@@ -286,12 +286,12 @@ export const ProductDetail: React.FC = () => {
               {/* Direct WhatsApp Ordering Assistance */}
               <div className="pt-2">
                 <a
-                  href={`https://wa.me/919820012345?text=${encodeURIComponent(`Hello Divyamrit, I would like to order ${quantity}x ${product.name} (${product.packSize}) at ${formatCurrency(product.price * quantity)}.`)}`}
+                  href={`https://wa.me/919116579047?text=${encodeURIComponent(`Hello Divyamrit, I would like to order ${quantity}x ${product.name} (${product.packSize}) at ${formatCurrency(product.price * quantity)}.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full py-3 px-4 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-xs"
                 >
-                  <span>Order via WhatsApp (+91 98200 12345)</span>
+                  <span>Order via WhatsApp (+91 91165 79047)</span>
                 </a>
               </div>
             </div>

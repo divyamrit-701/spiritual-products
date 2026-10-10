@@ -58,7 +58,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({
     },
     {
       id: 'slide-camphor',
-      bgImage: '/images/hero_slide_3.jpg',
+      bgImage: '/images/products/kapoor-mandir-lifestyle.jpg',
       badge: 'Pure Crystal Form • 100g Pack',
       badgeIcon: <Flame className="w-3.5 h-3.5 text-spiritual-gold-400" />,
       title: 'Divyamrit Bhimseni Kapoor\nPure Crystals | 100g',

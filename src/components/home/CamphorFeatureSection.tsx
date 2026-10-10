@@ -114,8 +114,8 @@ export const CamphorFeatureSection: React.FC<CamphorFeatureSectionProps> = ({
           <div className="lg:col-span-6 relative order-1 lg:order-2">
             <Link to={`/products/${camphorProduct.slug}`} className="block relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] sm:aspect-[16/11] bg-spiritual-earth-100 group">
               <img
-                src="/images/camphor_feature.jpg"
-                alt="Divyamrit Bhimseni Kapoor Pure Crystals 100g"
+                src="/images/products/kapoor-mandir-lifestyle.jpg"
+                alt="Divyamrit Bhimseni Kapoor Pure Crystals 100g in Devotional Mandir Setting"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               

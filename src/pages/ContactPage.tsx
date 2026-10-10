@@ -74,7 +74,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <strong className="block text-spiritual-earth-900">Customer Helpline & WhatsApp</strong>
-                    <p className="text-spiritual-earth-600 font-mono">+91 98200 12345 / +91 98200 67890</p>
+                    <p className="text-spiritual-earth-600 font-mono">+91 91165 79047</p>
                     <span className="text-[11px] text-spiritual-earth-500">Mon – Sat, 9:00 AM – 7:00 PM IST</span>
                   </div>
                 </div>
@@ -85,8 +85,8 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <strong className="block text-spiritual-earth-900">Devotee Care Email</strong>
-                    <p className="text-spiritual-earth-600">care@divyamrit.com</p>
-                    <p className="text-spiritual-earth-600 text-xs">For bulk orders: bulk@divyamrit.com</p>
+                    <p className="text-spiritual-earth-600">Contact@divyamrit.store</p>
+                    <p className="text-spiritual-earth-600 text-xs">Website: www.divyamrit.store</p>
                   </div>
                 </div>
 
@@ -95,11 +95,11 @@ export const ContactPage: React.FC = () => {
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="block text-spiritual-earth-900">Sanctum Headquarters & Workshop</strong>
+                    <strong className="block text-spiritual-earth-900">Headquarters & Packaging Facility</strong>
                     <p className="text-spiritual-earth-600 leading-relaxed">
-                      Divyamrit Aromatics Pvt. Ltd.<br />
-                      Sanctum House, Dashashwamedh Ghat Road,<br />
-                      Varanasi, Uttar Pradesh – 221001, Bharat
+                      Divyamrit<br />
+                      Vidhyadhar Nagar, Jaipur,<br />
+                      Rajasthan, Bharat
                     </p>
                   </div>
                 </div>
@@ -108,13 +108,13 @@ export const ContactPage: React.FC = () => {
               {/* WhatsApp Quick CTA */}
               <div className="pt-2 border-t border-spiritual-earth-100">
                 <a 
-                  href="https://wa.me/919820012345" 
+                  href="https://wa.me/919116579047" 
                   target="_blank" 
                   rel="noreferrer"
                   className="w-full flex items-center justify-center gap-2 p-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl text-xs font-bold transition-colors shadow-sm"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Chat with Concierge on WhatsApp</span>
+                  <span>Chat with Concierge on WhatsApp (+91 91165 79047)</span>
                 </a>
               </div>
             </div>

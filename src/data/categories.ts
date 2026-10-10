@@ -17,7 +17,7 @@ export const CATEGORIES: CategoryInfo[] = [
     hindiName: 'भीमसेनी शुद्ध कपूर',
     slug: 'bhimseni-camphor',
     description: 'Divyamrit Bhimseni Kapoor pure crystals specially packed for daily pooja, aarti, and traditional spiritual rituals.',
-    image: '/images/cat_camphor.jpg',
+    image: '/images/products/kapoor-jar-front.jpg',
     itemCount: 1,
     featuredFragrance: 'Pure Botanical Crystals'
   },
