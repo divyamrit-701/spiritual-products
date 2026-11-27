@@ -232,5 +232,82 @@ export const PRODUCTS: Product[] = [
     ],
     frequentlyBoughtTogetherIds: ['divyamrit-dhoop-4in1-pack2', 'divyamrit-bhimseni-kapoor-100g'],
     tags: ['dhoop-sticks', '4-in-1', 'rose', 'mogra', 'loban', 'guggal', 'pooja-essentials', 'single-jar']
+  },
+  {
+    id: 'divyamrit-dhoop-cones-4in1-400g',
+    name: 'Divyamrit 4-in-1 Premium Dhoop Cones | 400g | Rose, Chandan, Loban & Guggal',
+    hindiName: 'दिव्यामृत ४-इन-१ प्रीमियम धूप कोन्स | ४०० ग्राम',
+    slug: 'divyamrit-4-in-1-premium-dhoop-cones-400g',
+    category: 'dhoop-sticks',
+    categoryName: 'Dhoop Sticks',
+    shortDescription: 'Premium 4-in-1 Dhoop Cones featuring Rose, Chandan, Loban & Guggal — 400g of sacred bambooless, charcoal-free incense cones with stand. Perfect for pooja, meditation and aromatherapy.',
+    description: 'Divyamrit 4-in-1 Premium Dhoop Cones brings together four divine and traditional fragrances — Rose, Chandan, Loban & Guggal — in a single 400g pack.\n\nThese sacred incense cones are 100% bambooless and charcoal-free, delivering a pure, clean and deeply aromatic spiritual experience. Each cone comes with a convenient stand for easy placement during pooja, meditation and home aromatherapy. The rich fragrant smoke fills your sacred space with a calming and divine ambience, making every ritual a truly elevated experience.',
+    price: 199,
+    mrp: 999,
+    discountPercentage: 80,
+    amazonUrl: 'https://www.amazon.in/Fragrance-Bambooless-Charcoal-Meditation-Aromatherapy/dp/B0HR9CR2D7',
+    images: [
+      '/images/products/dhoop-cones-for-puja.png',
+      '/images/products/dhoop-cones-four-fragrances.png',
+      '/images/products/dhoop-cones-infographic.png',
+      '/images/products/dhoop-cones-divine-fragrance.png',
+      '/images/products/dhoop-cones-display.png'
+    ],
+    fragrance: 'Rose, Chandan, Loban & Guggal (4 in 1 Mix)',
+    packSize: '400g | Incense Cones with Stand',
+    netQuantity: '400g',
+    suitableFor: 'Daily pooja, meditation, aromatherapy and home fragrance',
+    burnTime: '20 - 25 Minutes per cone',
+    ingredients: ['Natural Rose Extract', 'Pure Chandan (Sandalwood) Essence', 'Sacred Loban Resin', 'Wild Guggal Resin'],
+    keyFeatures: [
+      '4-in-1 Sacred Fragrances: Rose, Chandan, Loban & Guggal',
+      '100% Bambooless & Charcoal Free incense cones',
+      'Comes with a convenient dhoop cone stand/holder',
+      '400g premium incense cones — perfect for daily & festive use',
+      'Sacred flower dhoop for pooja, meditation & aromatherapy',
+      'Clean burning — zero black soot, serene white smoke',
+      'Packed & Marketed by Divyamrit, Jaipur'
+    ],
+    productDetails: {
+      'Brand': 'DIVYAMRIT',
+      'Tagline': 'Pavitrata Har Pooja Ki',
+      'Product': '4 in 1 Premium Dhoop Cones',
+      'Fragrances': 'Rose, Chandan, Loban & Guggal',
+      'Net Contents': '400 gm',
+      'Item Form': 'Cone',
+      'Includes': 'Dhoop Cone Stand',
+      'Type': 'Bambooless Incense Cones',
+      'Charcoal Free': 'Yes',
+      'Bambooless': 'Yes (100% Bamboo-Free)',
+      'ASIN': 'B0HR9CR2D7',
+      'Shelf Life': '12 Months',
+      'Suitable for': 'Pooja, Meditation, Aromatherapy, Home Fragrance',
+      'Packed & Marketed by': 'Divyamrit, Vidhyadhar Nagar, Jaipur, Rajasthan',
+      'Customer Care': '+91 91165 79047',
+      'Email': 'Contact@divyamrit.store',
+      'Website': 'www.divyamrit.store',
+      'Category': 'Dhoop Cones / Incense'
+    },
+    charcoalFree: true,
+    bambooFree: true,
+    naturalResins: true,
+    rating: 4.8,
+    reviewCount: 64,
+    inStock: true,
+    stock: 150,
+    featured: true,
+    bestseller: false,
+    variants: [
+      { id: 'v-cones-400g', name: '400g with Stand', price: 199, mrp: 999, inStock: true }
+    ],
+    howToUse: [
+      'Place the dhoop cone upright on the included stand or a heat-safe cone holder.',
+      'Light the tip of the cone with a matchstick until a steady flame appears for 5–10 seconds.',
+      'Gently blow out the flame and let the aromatic smoke diffuse throughout the room.',
+      'Keep the cone on a non-flammable surface away from curtains and open breeze.',
+      'One cone provides 20–25 minutes of continuous divine fragrance.'
+    ],
+    frequentlyBoughtTogetherIds: ['divyamrit-dhoop-4in1-pack2', 'divyamrit-bhimseni-kapoor-100g'],
+    tags: ['dhoop-cones', '4-in-1', 'rose', 'chandan', 'sandalwood', 'loban', 'guggal', 'pooja-essentials', 'incense-cones', 'bambooless', 'charcoal-free']
   }
 ];

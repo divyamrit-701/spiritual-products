@@ -304,6 +304,16 @@ export const ProductDetail: React.FC = () => {
                     <span>Buy on Flipkart ({formatCurrency(product.price)})</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
+                ) : product.amazonUrl ? (
+                  <a
+                    href={product.amazonUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full py-3 px-4 rounded-full bg-[#ff9900] hover:bg-[#e68900] text-black text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-xs"
+                  >
+                    <span>Buy on Amazon ({formatCurrency(product.price)})</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
                 ) : (
                   <a
                     href="tel:+919116579047"

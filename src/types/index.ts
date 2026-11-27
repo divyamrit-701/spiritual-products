@@ -81,6 +81,7 @@ export interface Product {
   tags?: string[];
   frequentlyBoughtTogetherIds?: string[];
   flipkartUrl?: string;
+  amazonUrl?: string;
 }
 
 export interface CategoryInfo {
