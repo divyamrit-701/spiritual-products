@@ -30,5 +30,15 @@ export const CATEGORIES: CategoryInfo[] = [
     image: '/images/cat_combo.jpg',
     itemCount: 1,
     featuredFragrance: 'Complete Pooja Essentials'
+  },
+  {
+    id: 'divya-decor',
+    name: 'Divya Decor',
+    hindiName: 'दिव्य डेकोर एवं हस्तशिल्प',
+    slug: 'divya-decor',
+    description: 'Handcrafted pure brass decorative showpieces, urli bowls and sacred figurines to bring royalty, prosperity and heritage to your home mandir.',
+    image: '/images/products/brass-elephant-bowl-hero.jpg',
+    itemCount: 1,
+    featuredFragrance: 'Antique Gold Brass Heritage'
   }
 ];

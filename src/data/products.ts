@@ -638,5 +638,77 @@ export const PRODUCTS: Product[] = [
     ],
     frequentlyBoughtTogetherIds: ['divyamrit-ghee-diya-wicks-100pcs', 'divyamrit-bhimseni-kapoor-100g'],
     tags: ['dhoop-sticks', '4-pack', 'rose', 'mogra', 'loban', 'guggal', 'jars', 'combo-offer', 'gifting']
+  },
+  {
+    id: 'divyamrit-brass-elephant-bowl-15cm',
+    name: 'Divyamrit Divya Decor Handcrafted Brass Elephant Bowl Decorative Showpiece | 15 cm',
+    hindiName: 'दिव्यामृत दिव्य डेकोर हस्तशिल्प पीतल हाथी बाउल शोपीस (१५ सेमी)',
+    slug: 'divyamrit-divya-decor-handcrafted-brass-elephant-bowl-15cm',
+    category: 'divya-decor',
+    categoryName: 'Divya Decor',
+    shortDescription: 'Handcrafted pure brass elephant decorative bowl showpiece with antique gold finish (15×15×15 cm). Perfect for temple decor, potpourri, floating diyas, festive gifting, and royal home aesthetics.',
+    description: 'DIVYAMRIT Divya Decor Handcrafted Brass Elephant Bowl Showpiece is an exquisite blend of traditional Indian metal craft and royal aesthetics. Intricately carved by skilled artisans, this premium brass showpiece features the majestic elephant — a timeless symbol of prosperity, good luck, strength, and wisdom.\n\nMeasuring 15 cm in height, width, and depth with an antique gold finish, this versatile decorative piece serves beautifully as a pooja room accent, a center table decorative bowl for floating flowers/diyas or potpourri, an auspicious entryway showpiece, or an opulent festive gift for housewarming, Diwali, and spiritual occasions.',
+    price: 473,
+    mrp: 1999,
+    discountPercentage: 76,
+    flipkartUrl: 'https://www.flipkart.com/divyamrit-divya-decor-handcrafted-bass-erlephant-bowl-decorative-showpiece-gold-finish-15-cm/p/itm420ed3098edc1?pid=SHIHT4T3YRPYHP34&lid=LSTSHIHT4T3YRPYHP34K9LUWD',
+    images: [
+      '/images/products/brass-elephant-bowl-hero.jpg',
+      '/images/products/brass-elephant-bowl-angle.jpg',
+      '/images/products/brass-elephant-bowl-top.jpg',
+      '/images/products/brass-elephant-bowl-side.jpg',
+      '/images/products/brass-elephant-bowl-dimension.jpg'
+    ],
+    fragrance: 'Pure Brass / Traditional Metallic Craft',
+    packSize: '1 Handcrafted Brass Bowl (15×15×15 cm)',
+    netQuantity: '1 Piece (200g)',
+    eachBox: '1 Unit',
+    suitableFor: 'Living room, mandir decor, table centerpiece, entryway, festive gifting and Diwali decor',
+    ingredients: ['100% Solid Brass with Antique Gold Lacquer Finish'],
+    keyFeatures: [
+      'Premium Quality Brass Construction for long-lasting durability and royal sheen',
+      'Intricately Handcrafted Elephant Carvings reflecting authentic Indian craftsmanship',
+      'Multi-Purpose Decorative Bowl for potpourri, floating flowers, diyas, and accessories',
+      'Symbol of Prosperity, Good Fortune, Strength, and Spiritual Auspiciousness',
+      'Antique Gold Finish enhances luxury and heritage devotional appeal',
+      'Manufactured & Marketed directly by Divyamrit, Jaipur'
+    ],
+    productDetails: {
+      'Brand': 'DIVYAMRIT',
+      'Model Name': 'Divya Decor Handcrafted Brass Elephant Bowl Showpiece',
+      'Material': 'Solid Brass',
+      'Color / Finish': 'Antique Gold Finish (Glossy)',
+      'Dimensions': '15 cm × 15 cm × 15 cm (H × W × D)',
+      'Weight': '200 g',
+      'Sales Package': '1x Handcrafted Brass Elephant Bowl',
+      'Theme': 'Ethnic / Royal Spiritual Decor',
+      'MRP': '₹1,999.00',
+      'Selling Price': '₹473.00',
+      'Special Offer': '76% OFF on Flipkart (WOW! Deal at ₹449 with offers)',
+      'PID / SKU': 'SHIHT4T3YRPYHP34',
+      'Care Instructions': 'Clean with a soft dry cotton cloth; avoid harsh acidic chemicals',
+      'Manufacturer': 'Divyamrit, 701 Dhanuka Sunshine Kalyan, Sikar Road, Ambabari, Jaipur - 302039',
+      'Country of Origin': 'India'
+    },
+    charcoalFree: false,
+    bambooFree: false,
+    naturalResins: false,
+    rating: 5.0,
+    reviewCount: 18,
+    inStock: true,
+    stock: 45,
+    featured: true,
+    bestseller: true,
+    variants: [
+      { id: 'v-brass-elephant-15cm', name: '15 cm Brass Elephant Bowl', price: 473, mrp: 1999, inStock: true }
+    ],
+    howToUse: [
+      'Place on your mandir altar, console table, or living room centerpiece.',
+      'Fill with fresh water, rose petals, and a floating candle/camphor diya for an ethereal spiritual ambiance.',
+      'Alternatively, use as an elegant dry fruit, potpourri, or sacred offering bowl.',
+      'Wipe periodically with a clean microfiber cloth to maintain its golden luster.'
+    ],
+    frequentlyBoughtTogetherIds: ['divyamrit-bhimseni-kapoor-100g', 'divyamrit-ghee-diya-wicks-100pcs'],
+    tags: ['divya-decor', 'brass', 'showpiece', 'elephant-bowl', 'urli', 'handcrafted', 'pooja-decor', 'home-decor', 'flipkart']
   }
 ];

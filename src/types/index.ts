@@ -3,6 +3,7 @@ export type ProductCategory =
   | 'camphor'
   | 'combo-packs'
   | 'pooja-essentials'
+  | 'divya-decor'
   | 'all';
 
 export interface ProductVariant {
